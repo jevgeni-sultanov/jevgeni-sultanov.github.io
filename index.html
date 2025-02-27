@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Test</title>
+    </head>
+    <body>
+        <div id="id" style="height: 1000px;"></div>
+        <script src="https://unpkg.com/pdf-generator-api-pdfviewer@latest/dist/PDFViewer.iife.js"></script>
+        <script>
+            const { PDFViewer, PDFViewerThemes } = PDFGeneratorApi;
+
+            const viewer = new PDFViewer({
+                container: document.getElementById("id"),
+            });
+
+            viewer.setOptions({
+                theme: PDFViewerThemes.Light,
+                print: false,
+            });
+
+            viewer.loadUrl("https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf");
+        </script>
+    </body>
+</html>
