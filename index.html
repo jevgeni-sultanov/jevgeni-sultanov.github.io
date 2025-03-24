@@ -5,7 +5,7 @@
     </head>
     <body>
         <div id="id" style="height: 1000px;"></div>
-        <script src="PDFViewer.iife.js"></script>
+        <script src="https://unpkg.com/pdf-generator-api-pdfviewer@latest/dist/PDFViewer.iife.js"></script>
         <script>
             const { PDFViewer, Theme } = PDFGeneratorApi;
 
@@ -16,8 +16,6 @@
             viewer.setOptions({
                 theme: Theme.Light,
             });
-
-            viewer.loadUrl("https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf");
         </script>
     </body>
 </html>
